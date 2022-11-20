@@ -1,9 +1,10 @@
 import React from "react";
+import StorageIcon from '@mui/icons-material/Storage';
 
 function Header(){
     return (
         <header>
-            <h1>Keeper</h1>
+            <h1><StorageIcon />Keeper</h1>
         </header>
     )
 }

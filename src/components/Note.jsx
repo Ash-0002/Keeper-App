@@ -1,10 +1,18 @@
 import React from "react";
+import DeleteIcon from '@mui/icons-material/Delete';
+import Fab from "@mui/material/Fab";
 
-function Note() {
-    return <div className="note">
-        <h1>This is the title</h1>
-        <p>This is a paragraph</p>
+
+function Note(props) {
+  return (
+    <div className="note">
+      <h1>{props.title} </h1>
+      <p>{props.content} </p>
+      <Fab onClick={() => {props.onDelete(props.id)}}>
+       <DeleteIcon /> 
+       </Fab>
     </div>
+  );
 }
 
 export default Note;
